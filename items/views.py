@@ -76,7 +76,8 @@ def type_edit(request, id):
         form = TypeForm(initial={'category': type.category,
                                  'vendor': type.vendor,
                                  'type': type.type,
-                                 'description': type.description})
+                                 'description': type.description,
+                                })
 
     return render(request, 'items/type-edit.html', {'form': form, 'obj': type})
 
@@ -180,7 +181,8 @@ def item_edit(request, id):
                                  'commissioning_date': item.commissioning_date,
                                  'decommissioning_date': item.decommissioning_date,
                                  'comment': item.comment,
-                                 'member': item.member})
+                                 'member': item.member,
+                                })
 
     return render(request, 'items/item-edit.html', {'form': form, 'obj': item})
 
