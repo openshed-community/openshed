@@ -77,7 +77,8 @@ def member_edit(request, id):
     else:
         form = MemberForm(initial={'first_name': member.first_name,
                                    'last_name': member.last_name,
-                                   'departure_date': member.departure_date})
+                                   'departure_date': member.departure_date,
+                                  })
 
     return render(request, 'members/member-edit.html', {'form': form, 'obj': member})
 
